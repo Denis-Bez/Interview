@@ -1,0 +1,9 @@
+.vscode
+.git
+.interview
+__pycache__
+config.py
+config
+Dockerfile
+.dockerignore
+docker-compose.yml
