@@ -11,7 +11,7 @@ Output: [1,2]
 nums = [3,2,4]
 target = 6
 
-## --- Approach 1 --- Time: O(n2)
+## --- Approach 1 --- Time complexity: O(n2)
 class Solution1:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         for i in range(len(nums)):
@@ -20,7 +20,7 @@ class Solution1:
                     return [i, j]   
 
 
-## --- Approach 2 ---
+## --- Approach 2 --- Time complexity: O(n)
 class Solution2:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         hashmap = {}
