@@ -20,7 +20,7 @@ class Solution1:
                     return [i, j]   
 
 
-## --- Approach 2 --- Time complexity: O(n)
+## --- Approach 2 --- Time complexity: O(n), Space complexity: O(n)
 class Solution2:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         hashmap = {}
