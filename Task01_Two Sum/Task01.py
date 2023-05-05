@@ -11,7 +11,7 @@ Output: [1,2]
 nums = [3,2,4]
 target = 6
 
-## --- Approach 1 --- Time complexity: O(n2)
+## --- Approach 1 "Brute Force"--- Time complexity: O(n2)
 class Solution1:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         for i in range(len(nums)):
@@ -20,7 +20,7 @@ class Solution1:
                     return [i, j]   
 
 
-## --- Approach 2 --- Time complexity: O(n), Space complexity: O(n)
+## --- Approach 2 "Two-pass Hash Table"--- Time complexity: O(n), Space complexity: O(n)
 class Solution2:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         hashmap = {}
@@ -32,6 +32,17 @@ class Solution2:
                 return [i, hashmap[complement]] 
 
 
+## --- Approach 3 "One-pass Hash Table"--- Time complexity: O(n), Space complexity: O(n)
+class Solution3:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        hashmap = {}
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in hashmap:
+                return [i, hashmap[complement]]
+            hashmap[nums[i]] = i
+
+
 if __name__ == '__main__':
-    Task1 = Solution2()
+    Task1 = Solution3()
     print(Task1.twoSum(nums, target))
